@@ -1,33 +1,43 @@
 
 /**
- * Write a description of class Jugador here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class Jugador
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Atributo que almacena el nombre del jugador.
+    private String nombre;
+    // Atributo que cuenta las respuestas correctas.
+    private int respuestasCorrectas;
+    // Atributo que cuenta las respuestas erroneas.
+    private int errores;
 
     /**
      * Constructor for objects of class Jugador
      */
-    public Jugador()
+    public Jugador(String nombre)
     {
-        // initialise instance variables
-        x = 0;
+        this.nombre = nombre;
+        respuestasCorrectas = 0;
+        errores = 0;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Devuelve un String con toda la información del jugador.
      */
-    public int sampleMethod(int y)
+    public String toString()
     {
-        // put your code here
-        return x + y;
+        return "Jugador: " + nombre + " - Respuestas correctas: " + respuestasCorrectas + " - Errores: " + errores;
+    }
+    
+    /**
+     * Modifica la puntuacion dependiendo de la respuesta recibida por parametro.
+     */
+    public void respuesta(boolean respuesta)
+    {
+        if(respuesta){
+            respuestasCorrectas++;
+        }else{
+            errores++;
+        }
     }
 }
