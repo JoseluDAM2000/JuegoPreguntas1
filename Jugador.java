@@ -40,4 +40,12 @@ public class Jugador
             errores++;
         }
     }
+    
+    /**
+     * Devuelve el nombre del jugador.
+     */
+    public String getNombre()
+    {
+        return nombre;
+    }
 }

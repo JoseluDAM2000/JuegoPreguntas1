@@ -28,7 +28,7 @@ public class Pregunta
     /**
      * Devuelve un String con el nombre de la categoria de la pregunta.
      */
-    private String categoriaToString()
+    public String categoriaToString()
     {
         String categoria = "";
         switch(this.categoria){
